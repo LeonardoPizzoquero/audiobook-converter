@@ -46,13 +46,15 @@ Convert your PDF and EPUB books into high-quality audiobooks using AI voices in 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Virtual environment (recommended)
+- One of: pip + venv, Conda, or UV package manager
 
 ### Installation
 
+#### Option 1: Using pip + venv (Standard)
+
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
 cd audiobook-converter
 ```
 
@@ -72,17 +74,94 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Usage
+#### Option 2: Using Conda
 
-1. **Start the application**
+1. **Clone the repository**
 ```bash
-python main.py
+git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
+cd audiobook-converter
 ```
 
-2. **Open your browser**
+2. **Create and activate conda environment**
+```bash
+# Create environment with Python 3.11
+conda create -n audiobook-converter python=3.11
+
+# Activate environment
+conda activate audiobook-converter
+```
+
+3. **Install dependencies**
+```bash
+# Install pip packages in conda environment
+pip install -r requirements.txt
+
+# Alternative: Install available packages via conda first
+conda install numpy soundfile
+pip install gradio kokoro-tts PyPDF2 ebooklib beautifulsoup4 tqdm
+```
+
+#### Option 3: Using UV (Fast Package Manager)
+
+1. **Install UV** (if not already installed)
+```bash
+# On Linux/Mac:
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# On Windows (PowerShell):
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+2. **Clone and setup project**
+```bash
+git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
+cd audiobook-converter
+
+# Create virtual environment and install dependencies in one command
+uv sync
+
+# Or manually:
+uv venv
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+uv pip install -r requirements.txt
+```
+
+### Usage
+
+#### Running with pip + venv
+1. **Activate environment and start the application**
+```bash
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+python app_refactored.py
+```
+
+#### Running with Conda
+1. **Activate environment and start the application**
+```bash
+conda activate audiobook-converter
+python app_refactored.py
+```
+
+#### Running with UV
+1. **Start the application**
+```bash
+# If using uv sync:
+uv run python app_refactored.py
+
+# If using manual venv:
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+python app_refactored.py
+```
+
+#### Using the Application
+
+1. **Open your browser**
    - Navigate to `http://localhost:7860`
 
-3. **Convert your book**
+2. **Convert your book**
    - Upload your PDF or EPUB file
    - Select language and narrator
    - Click "Convert to Audiobook"
@@ -92,13 +171,37 @@ python main.py
 
 ```
 audiobook-converter/
-├── main.py      # Main Gradio application
+├── app_refactored.py      # Main Gradio application
 ├── voices.py              # Voice and language configuration
 ├── text_processor.py      # PDF/EPUB text extraction
 ├── audio_processor.py     # Audio generation and processing
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
 └── main.py              # Command-line version
+```
+
+## 🔧 Command Line Usage
+
+For batch processing, use the command-line interface:
+
+#### With pip + venv:
+```bash
+source .venv/bin/activate
+python main.py your_book.pdf
+python main.py your_book.epub
+```
+
+#### With Conda:
+```bash
+conda activate audiobook-converter
+python main.py your_book.pdf
+python main.py your_book.epub
+```
+
+#### With UV:
+```bash
+uv run python main.py your_book.pdf
+uv run python main.py your_book.epub
 ```
 
 ## 🛠️ Configuration
@@ -115,16 +218,7 @@ You can modify processing parameters in `audio_processor.py`:
 
 To add new voices, update the `VOICE_CONFIG` in `voices.py` following the existing pattern.
 
-## 🔧 Command Line Usage
-
-For batch processing, use the command-line interface:
-
-```bash
-python main.py your_book.pdf
-python main.py your_book.epub
-```
-
-## 📋 Requirements
+##  Requirements
 
 - **gradio**: Web interface framework
 - **kokoro-tts**: AI text-to-speech engine
@@ -134,6 +228,14 @@ python main.py your_book.epub
 - **ebooklib**: EPUB text extraction
 - **beautifulsoup4**: HTML parsing for EPUB
 - **tqdm**: Progress bars
+
+## 💡 Quick Start Commands
+
+| Package Manager | Setup | Run App | Run CLI |
+|----------------|-------|---------|---------|
+| **pip + venv** | `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` | `python app_refactored.py` | `python main.py book.pdf` |
+| **Conda** | `conda create -n audiobook-converter python=3.11 && conda activate audiobook-converter && pip install -r requirements.txt` | `python app_refactored.py` | `python main.py book.pdf` |
+| **UV** | `uv sync` | `uv run python app_refactored.py` | `uv run python main.py book.pdf` |
 
 ## 🤝 Contributing
 
