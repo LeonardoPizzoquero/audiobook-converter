@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 def process_audio_chunk(chunk_data, voice_code, lang_code):
     chunk_text, chunk_id = chunk_data
     try:
-        pipeline = KPipeline(lang_code=lang_code)
+        pipeline = KPipeline(lang_code=lang_code, repo_id='hexgrad/Kokoro-82M')
         local_audio_chunks = []
         generator = pipeline(chunk_text, voice=voice_code)
         

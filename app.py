@@ -158,20 +158,6 @@ def create_interface():
                     visible=True
                 )
         
-        # Examples section
-        gr.HTML("""
-        <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 10px;">
-            <h3 style="margin-top: 0;">💡 Tips for best results:</h3>
-            <ul style="margin-bottom: 0;">
-                <li>📄 <strong>PDF files:</strong> Works best with text-based PDFs (not scanned images)</li>
-                <li>📚 <strong>EPUB files:</strong> Full support for all EPUB formats</li>
-                <li>🎭 <strong>Voice selection:</strong> Try different voices to find your preferred style</li>
-                <li>⏰ <strong>Processing time:</strong> Small books ~2-5 min, larger books ~10-20 min</li>
-                <li>🎵 <strong>Output:</strong> High-quality 24kHz WAV files ready for any audio player</li>
-            </ul>
-        </div>
-        """)
-        
         language_input.change(
             fn=update_narrator_choices,
             inputs=[language_input],
