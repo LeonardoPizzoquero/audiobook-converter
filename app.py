@@ -186,10 +186,14 @@ def create_interface():
         )    
     return app
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the audiobook converter application."""
     app = create_interface()
     app.launch(
         share=True,  # Isto cria um link público temporário
         show_error=True,
         show_api=False
     )
+
+if __name__ == "__main__":
+    main()
