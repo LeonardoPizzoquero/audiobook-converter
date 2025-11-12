@@ -1,0 +1,184 @@
+# 📚 Audiobook Converter
+
+Convert your PDF and EPUB books into high-quality audiobooks using AI voices in multiple languages.
+
+## ✨ Features
+
+- **📖 Multiple Formats**: Support for PDF and EPUB files
+- **🌍 Multilingual**: 9 languages with 40+ voices
+- **🎵 High Quality**: 24kHz WAV output
+- **⚡ Fast Processing**: Parallel audio generation
+- **🎭 Voice Variety**: Male and female voices for each language
+- **🔧 Easy to Use**: Web interface powered by Gradio
+
+## 🌍 Supported Languages & Voices
+
+### 🇧🇷 Brazilian Portuguese (Default)
+- **3 voices**: Dora (Female), Alex (Male), Santa (Male)
+
+### 🇺🇸 American English  
+- **20 voices**: Heart⭐, Bella, Nicole, Alloy, Aoede, Jessica, Kore, Nova, River, Sarah, Sky (Female)
+- Adam, Echo, Eric, Fenrir, Liam, Michael, Onyx, Puck, Santa (Male)
+
+### 🇬🇧 British English
+- **8 voices**: Alice, Emma, Isabella, Lily (Female) | Daniel, Fable, George, Lewis (Male)
+
+### 🇪🇸 Spanish
+- **3 voices**: Dora (Female) | Alex, Santa (Male)
+
+### 🇫🇷 French
+- **1 voice**: Siwis (Female)
+
+### 🇮🇳 Hindi
+- **4 voices**: Alpha, Beta (Female) | Omega, Psi (Male)
+
+### 🇮🇹 Italian
+- **2 voices**: Sara (Female) | Nicola (Male)
+
+### 🇯🇵 Japanese
+- **5 voices**: Alpha, Gongitsune, Nezumi, Tebukuro (Female) | Kumo (Male)
+
+### 🇨🇳 Mandarin Chinese
+- **8 voices**: Xiaobei, Xiaoni, Xiaoxiao, Xiaoyi (Female) | Yunjian, Yunxi, Yunxia, Yunyang (Male)
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Virtual environment (recommended)
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone <repository-url>
+cd audiobook-converter
+```
+
+2. **Create and activate virtual environment**
+```bash
+python -m venv .venv
+
+# On Linux/Mac:
+source .venv/bin/activate
+
+# On Windows:
+.venv\Scripts\activate
+```
+
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+1. **Start the application**
+```bash
+python main.py
+```
+
+2. **Open your browser**
+   - Navigate to `http://localhost:7860`
+
+3. **Convert your book**
+   - Upload your PDF or EPUB file
+   - Select language and narrator
+   - Click "Convert to Audiobook"
+   - Download the generated WAV file
+
+## 📁 Project Structure
+
+```
+audiobook-converter/
+├── main.py      # Main Gradio application
+├── voices.py              # Voice and language configuration
+├── text_processor.py      # PDF/EPUB text extraction
+├── audio_processor.py     # Audio generation and processing
+├── requirements.txt       # Python dependencies
+├── README.md             # This file
+└── main.py              # Command-line version
+```
+
+## 🛠️ Configuration
+
+### Adjusting Performance
+
+You can modify processing parameters in `audio_processor.py`:
+
+- `max_workers`: Number of parallel threads (default: 4)
+- `chunk_size`: Text chunk size for processing (default: 200 words)
+- `sample_rate`: Audio output sample rate (default: 24000 Hz)
+
+### Adding Custom Voices
+
+To add new voices, update the `VOICE_CONFIG` in `voices.py` following the existing pattern.
+
+## 🔧 Command Line Usage
+
+For batch processing, use the command-line interface:
+
+```bash
+python main.py your_book.pdf
+python main.py your_book.epub
+```
+
+## 📋 Requirements
+
+- **gradio**: Web interface framework
+- **kokoro-tts**: AI text-to-speech engine
+- **soundfile**: Audio file processing
+- **numpy**: Numerical computations
+- **PyPDF2**: PDF text extraction
+- **ebooklib**: EPUB text extraction
+- **beautifulsoup4**: HTML parsing for EPUB
+- **tqdm**: Progress bars
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- **Kokoro TTS**: For providing the high-quality AI voices
+- **Gradio**: For the excellent web interface framework
+- **Contributors**: Thank you to all contributors who help improve this project
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Installation Problems:**
+- Ensure you're using Python 3.8+
+- Try updating pip: `pip install --upgrade pip`
+- Use virtual environment to avoid conflicts
+
+**Memory Issues:**
+- Reduce `max_workers` in audio_processor.py
+- Increase `chunk_size` for longer text segments
+
+**Audio Quality:**
+- Ensure input text is clean and well-formatted
+- Try different voices for better results
+- Check that the selected language matches your text
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Issues](link-to-issues) page
+2. Create a new issue with detailed information
+3. Include error messages and system information
+
+---
+
+**Made with ❤️ for the audiobook community**
