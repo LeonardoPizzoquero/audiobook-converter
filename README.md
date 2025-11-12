@@ -134,74 +134,55 @@ uv pip install -r requirements.txt
 ```bash
 source .venv/bin/activate  # Linux/Mac
 # .venv\Scripts\activate   # Windows
-python app_refactored.py
+python main.py
 ```
 
 #### Running with Conda
 1. **Activate environment and start the application**
 ```bash
 conda activate audiobook-converter
-python app_refactored.py
+python main.py
 ```
 
 #### Running with UV
 1. **Start the application**
 ```bash
 # If using uv sync:
-uv run python app_refactored.py
+uv run python main.py
 
 # If using manual venv:
 source .venv/bin/activate  # Linux/Mac
 # .venv\Scripts\activate   # Windows
-python app_refactored.py
+python main.py
 ```
 
 #### Using the Application
 
-1. **Open your browser**
-   - Navigate to `http://localhost:7860`
+1. **The app will start on port 7860**
+   - You'll see output like: `Running on local URL:  http://127.0.0.1:7860`
+   - Open your browser to: `http://localhost:7860`
 
 2. **Convert your book**
    - Upload your PDF or EPUB file
-   - Select language and narrator
+   - Select language and narrator  
    - Click "Convert to Audiobook"
+   - Wait for processing (progress will be shown)
    - Download the generated WAV file
+
+3. **Stop the application**
+   - Press `Ctrl+C` in the terminal to stop the server
 
 ## 📁 Project Structure
 
 ```
 audiobook-converter/
-├── app_refactored.py      # Main Gradio application
+├── main.py      # Main Gradio application
 ├── voices.py              # Voice and language configuration
 ├── text_processor.py      # PDF/EPUB text extraction
 ├── audio_processor.py     # Audio generation and processing
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
-└── main.py              # Command-line version
-```
-
-## 🔧 Command Line Usage
-
-For batch processing, use the command-line interface:
-
-#### With pip + venv:
-```bash
-source .venv/bin/activate
-python main.py your_book.pdf
-python main.py your_book.epub
-```
-
-#### With Conda:
-```bash
-conda activate audiobook-converter
-python main.py your_book.pdf
-python main.py your_book.epub
-```
-
-#### With UV:
-```bash
-uv run python main.py your_book.pdf
-uv run python main.py your_book.epub
+└── main.py              # Original script (legacy)
 ```
 
 ## 🛠️ Configuration
@@ -231,11 +212,13 @@ To add new voices, update the `VOICE_CONFIG` in `voices.py` following the existi
 
 ## 💡 Quick Start Commands
 
-| Package Manager | Setup | Run App | Run CLI |
-|----------------|-------|---------|---------|
-| **pip + venv** | `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` | `python app_refactored.py` | `python main.py book.pdf` |
-| **Conda** | `conda create -n audiobook-converter python=3.11 && conda activate audiobook-converter && pip install -r requirements.txt` | `python app_refactored.py` | `python main.py book.pdf` |
-| **UV** | `uv sync` | `uv run python app_refactored.py` | `uv run python main.py book.pdf` |
+| Package Manager | Setup | Run App (Port 7860) |
+|----------------|-------|---------------------|
+| **pip + venv** | `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` | `python main.py` |
+| **Conda** | `conda create -n audiobook-converter python=3.11 && conda activate audiobook-converter && pip install -r requirements.txt` | `python main.py` |
+| **UV** | `uv sync` | `uv run python main.py` |
+
+> 🌐 **Access the app**: Open your browser to `http://localhost:7860` after running any of the commands above.
 
 ## 🤝 Contributing
 
