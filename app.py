@@ -12,6 +12,7 @@ def get_file_type(filename):
     return None
 
 def extract_text(file_path, file_type):
+    """Extract text based on file type."""
     if file_type == 'PDF':
         return extract_text_pdf(file_path)
     elif file_type == 'EPUB':
@@ -54,24 +55,30 @@ def convert_to_audiobook(file_upload, language, narrator, progress=gr.Progress()
         if len(clean_text_content) < 10:
             return None, "Extracted text too short."
         
+        progress(0.25, desc="Creating text chunks...")
         chunks = split_text_into_chunks(clean_text_content, chunk_size=200)
         
-        progress(0.3, desc=f"Processing {len(chunks)} audio chunks...")
+        sequential_mode = (file_type == 'EPUB')
+        max_workers = 1 if sequential_mode else 2
+        
+        processing_mode = "sequential" if sequential_mode else "parallel"
+        progress(0.3, desc=f"Processing {len(chunks)} audio chunks ({processing_mode})...")
         
         def update_progress(completed, total):
             progress(0.3 + (completed / total) * 0.6, 
-                   desc=f"Processed {completed}/{total} chunks")
+                   desc=f"Processed {completed}/{total} chunks ({processing_mode})")
         
         audio_results = convert_chunks_to_audio(
             chunks, voice_code, lang_code, 
             progress_callback=update_progress, 
-            max_workers=4
+            max_workers=max_workers,
+            sequential=sequential_mode
         )
         
-        if not audio_results:
+        if audio_results is None:
             return None, "No audio was generated."
         
-        progress(0.9, desc="Concatenating final audio...")
+        progress(0.9, desc="Finalizing audio...")
         complete_audio = concatenate_audio(audio_results)
         
         if complete_audio is None:
@@ -84,11 +91,12 @@ def convert_to_audiobook(file_upload, language, narrator, progress=gr.Progress()
         
         status_message = (
             f"✅ Audiobook created successfully!\n"
-            f"📖 File: {file_type}\n"
+            f"📖 File: {file_type} (processed {processing_mode})\n"
             f"🌍 Language: {language}\n"
             f"🎭 Narrator: {narrator}\n"
             f"⏱️ Duration: {duration:.2f} seconds\n"
-            f"📁 Text size: {len(clean_text_content)} characters"
+            f"📁 Text size: {len(clean_text_content)} characters\n"
+            f"🔢 Chunks processed: {len(chunks)}"
         )
         
         return output_file, status_message
@@ -108,16 +116,7 @@ def update_narrator_choices(language):
     return gr.Dropdown(choices=[])
 
 def create_interface():
-    with gr.Blocks(title="Audiobook Converter") as app:
-        gr.HTML("""
-        <div style="text-align: center; padding: 20px;">
-            <h1>📚 Audiobook Converter</h1>
-            <p>Convert your PDF or EPUB books into audiobooks with multilingual AI voices!</p>
-            <p><strong>Supports 9 languages and 40+ voices powered by Kokoro TTS</strong></p>
-            <p><em>⚠️ Note: Processing may take several minutes depending on book length</em></p>
-        </div>
-        """)
-        
+    with gr.Blocks(title="Audiobook Converter") as app:        
         with gr.Row():
             with gr.Column(scale=1):
                 file_input = gr.File(
@@ -173,10 +172,9 @@ def create_interface():
     return app
 
 def main():
-    """Main entry point for the audiobook converter application."""
     app = create_interface()
     app.launch(
-        share=True,  # Isto cria um link público temporário
+        share=True,
         show_error=True,
         show_api=False
     )
