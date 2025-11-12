@@ -1,4 +1,4 @@
-# 📚 PDF/EPUB to Audiobook Converter# PDF/EPUB to Audiobook Converter# 📚 Audiobook Converter
+# 📚 PDF/EPUB to Audiobook Converter# 📚 PDF/EPUB to Audiobook Converter
 
 
 
@@ -6,15 +6,15 @@ Convert your PDF and EPUB books into high-quality audiobooks using AI voices in 
 
 
 
-## ✨ FeaturesEste projeto converte arquivos PDF e EPUB em audiolivros usando vozes de IA em múltiplos idiomas.Convert your PDF and EPUB books into high-quality audiobooks using AI voices in multiple languages.
+## ✨ FeaturesConvert your PDF and EPUB books into high-quality audiobooks using AI voices in multiple languages.
 
 
 
 - **📖 Multiple Formats**: Support for PDF and EPUB files
 
-- **🌍 Multilingual**: 9 languages with 40+ different voices
+- **🌍 Multilingual**: 9 languages with 40+ voices
 
-- **🎵 High Quality**: 24kHz WAV output## 📋 Duas Versões Disponíveis## ✨ Features
+- **🎵 High Quality**: 24kHz WAV output## ✨ FeaturesEste projeto converte arquivos PDF e EPUB em audiolivros usando vozes de IA em múltiplos idiomas.Convert your PDF and EPUB books into high-quality audiobooks using AI voices in multiple languages.
 
 - **⚡ Fast Processing**: Parallel audio generation
 
@@ -22,23 +22,23 @@ Convert your PDF and EPUB books into high-quality audiobooks using AI voices in 
 
 - **🔧 Easy to Use**: Web interface powered by Gradio
 
-### 🎯 Versão Completa (Local) - `app.py`- **📖 Multiple Formats**: Support for PDF and EPUB files
+- **📖 Multiple Formats**: Support for PDF and EPUB files
 
 ## 🌍 Supported Languages & Voices
 
-- **Funcionalidade completa** com conversão em audiolivro- **🌍 Multilingual**: 9 languages with 40+ voices
+- **🌍 Multilingual**: 9 languages with 40+ different voices
 
 ### 🇧🇷 Brazilian Portuguese (Default)
 
-- **3 voices**: Dora (Female), Alex (Male), Santa (Male)- Suporte para 9 idiomas e 40+ vozes- **🎵 High Quality**: 24kHz WAV output
+- **3 voices**: Dora (Female), Alex (Male), Santa (Male)- **🎵 High Quality**: 24kHz WAV output## 📋 Duas Versões Disponíveis## ✨ Features
 
 
 
-### 🇺🇸 American English  - Processamento paralelo otimizado- **⚡ Fast Processing**: Parallel audio generation
+### 🇺🇸 American English  - **⚡ Fast Processing**: Parallel audio generation
 
 - **20 voices**: Heart⭐, Bella, Nicole, Alloy, Aoede, Jessica, Kore, Nova, River, Sarah, Sky (Female)
 
-- Adam, Echo, Eric, Fenrir, Liam, Michael, Onyx, Puck, Santa (Male)- Execução local com todas as dependências- **🎭 Voice Variety**: Male and female voices for each language
+- Adam, Echo, Eric, Fenrir, Liam, Michael, Onyx, Puck, Santa (Male)- **🎭 Voice Variety**: Male and female voices for each language
 
 
 
@@ -46,23 +46,23 @@ Convert your PDF and EPUB books into high-quality audiobooks using AI voices in 
 
 - **8 voices**: Alice, Emma, Isabella, Lily (Female) | Daniel, Fable, George, Lewis (Male)
 
-### 🌐 Versão Demo (Online) - `app_demo.py`
+### 🎯 Versão Completa (Local) - `app.py`- **📖 Multiple Formats**: Support for PDF and EPUB files
 
 ### 🇪🇸 Spanish
 
-- **3 voices**: Dora (Female) | Alex, Santa (Male)- **Demonstração simplificada** para deploy na nuvem## 🌍 Supported Languages & Voices
+- **3 voices**: Dora (Female) | Alex, Santa (Male)## 🌍 Supported Languages & Voices
 
 
 
-### 🇫🇷 French- Extração de texto apenas (sem síntese de áudio)
+### 🇫🇷 French- **Funcionalidade completa** com conversão em audiolivro- **🌍 Multilingual**: 9 languages with 40+ voices
 
 - **1 voice**: Siwis (Female)
 
-- Compatível com Hugging Face Spaces### 🇧🇷 Brazilian Portuguese (Default)
+### 🇧🇷 Brazilian Portuguese (Default)
 
 ### 🇮🇳 Hindi
 
-- **4 voices**: Alpha, Beta (Female) | Omega, Psi (Male)- Dependências reduzidas- **3 voices**: Dora (Female), Alex (Male), Santa (Male)
+- **4 voices**: Alpha, Beta (Female) | Omega, Psi (Male)- **3 voices**: Dora (Female), Alex (Male), Santa (Male)- Suporte para 9 idiomas e 40+ vozes- **🎵 High Quality**: 24kHz WAV output
 
 
 
@@ -70,7 +70,7 @@ Convert your PDF and EPUB books into high-quality audiobooks using AI voices in 
 
 - **2 voices**: Sara (Female) | Nicola (Male)
 
-## 🚀 Características da Versão Completa### 🇺🇸 American English  
+### 🇺🇸 American English  - Processamento paralelo otimizado- **⚡ Fast Processing**: Parallel audio generation
 
 ### 🇯🇵 Japanese
 
@@ -78,38 +78,149 @@ Convert your PDF and EPUB books into high-quality audiobooks using AI voices in 
 
 
 
-### 🇨🇳 Mandarin Chinese- Suporte para arquivos PDF e EPUB- Adam, Echo, Eric, Fenrir, Liam, Michael, Onyx, Puck, Santa (Male)
+### 🇨🇳 Mandarin Chinese- Adam, Echo, Eric, Fenrir, Liam, Michael, Onyx, Puck, Santa (Male)- Execução local com todas as dependências- **🎭 Voice Variety**: Male and female voices for each language
 
 - **8 voices**: Xiaobei, Xiaoni, Xiaoxiao, Xiaoyi (Female) | Yunjian, Yunxi, Yunxia, Yunyang (Male)
 
-- Interface web intuitiva com Gradio
+
 
 ## 🚀 Installation
 
-- Processamento paralelo para maior velocidade### 🇬🇧 British English
+### 🇬🇧 British English- **🔧 Easy to Use**: Web interface powered by Gradio
 
 ### Prerequisites
 
-- Suporte para 9 idiomas: Português (BR), Inglês (US/UK), Espanhol, Francês, Hindi, Italiano, Japonês, Chinês- **8 voices**: Alice, Emma, Isabella, Lily (Female) | Daniel, Fable, George, Lewis (Male)
+- Python 3.8 or higher- **8 voices**: Alice, Emma, Isabella, Lily (Female) | Daniel, Fable, George, Lewis (Male)
 
-- Python 3.8 or higher
+- One of: pip, Conda, or UV package manager
 
-- One of: pip + venv, Conda, or UV package manager- Mais de 40 vozes diferentes disponíveis
+### 🌐 Versão Demo (Online) - `app_demo.py`
+
+### Option 1: Using pip
+
+```bash### 🇪🇸 Spanish
+
+git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
+
+cd audiobook-converter- **3 voices**: Dora (Female) | Alex, Santa (Male)- **Demonstração simplificada** para deploy na nuvem## 🌍 Supported Languages & Voices
+
+python -m venv .venv
+
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py### 🇫🇷 French- Extração de texto apenas (sem síntese de áudio)
+
+```
+
+- **1 voice**: Siwis (Female)
+
+### Option 2: Using Conda
+
+```bash- Compatível com Hugging Face Spaces### 🇧🇷 Brazilian Portuguese (Default)
+
+git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
+
+cd audiobook-converter### 🇮🇳 Hindi
+
+conda create -n audiobook python=3.11
+
+conda activate audiobook- **4 voices**: Alpha, Beta (Female) | Omega, Psi (Male)- Dependências reduzidas- **3 voices**: Dora (Female), Alex (Male), Santa (Male)
+
+pip install -r requirements.txt
+
+python app.py
+
+```
+
+### 🇮🇹 Italian
+
+### Option 3: Using UV (Fastest)
+
+```bash- **2 voices**: Sara (Female) | Nicola (Male)
+
+git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
+
+cd audiobook-converter## 🚀 Características da Versão Completa### 🇺🇸 American English  
+
+curl -LsSf https://astral.sh/uv/install.sh | sh  # Install UV if needed
+
+uv sync### 🇯🇵 Japanese
+
+uv run app.py
+
+```- **5 voices**: Alpha, Gongitsune, Nezumi, Tebukuro (Female) | Kumo (Male)- **20 voices**: Heart⭐, Bella, Nicole, Alloy, Aoede, Jessica, Kore, Nova, River, Sarah, Sky (Female)
 
 
 
-### Option 1: Using UV (Recommended)- Geração de audiolivros em alta qualidade (24kHz)### 🇪🇸 Spanish
+## 💻 Usage
 
 
 
-1. **Clone the repository**- **3 voices**: Dora (Female) | Alex, Santa (Male)
+1. Open your browser to `http://localhost:7860`### 🇨🇳 Mandarin Chinese- Suporte para arquivos PDF e EPUB- Adam, Echo, Eric, Fenrir, Liam, Michael, Onyx, Puck, Santa (Male)
 
-```bash
+2. Upload a PDF or EPUB file
+
+3. Select language and voice- **8 voices**: Xiaobei, Xiaoni, Xiaoxiao, Xiaoyi (Female) | Yunjian, Yunxi, Yunxia, Yunyang (Male)
+
+4. Click "Convert to Audiobook"
+
+5. Download the generated audio file- Interface web intuitiva com Gradio
+
+
+
+## 📁 Project Structure## 🚀 Installation
+
+
+
+```- Processamento paralelo para maior velocidade### 🇬🇧 British English
+
+├── app.py                # Main application
+
+├── voices.py             # Voice configuration### Prerequisites
+
+├── text_processor.py     # Text extraction
+
+├── audio_processor.py    # Audio conversion- Suporte para 9 idiomas: Português (BR), Inglês (US/UK), Espanhol, Francês, Hindi, Italiano, Japonês, Chinês- **8 voices**: Alice, Emma, Isabella, Lily (Female) | Daniel, Fable, George, Lewis (Male)
+
+└── requirements.txt      # Dependencies
+
+```- Python 3.8 or higher
+
+
+
+## ⚠️ Limitations- One of: pip + venv, Conda, or UV package manager- Mais de 40 vozes diferentes disponíveis
+
+
+
+- Works best with text-based PDFs (not scanned images)
+
+- Large files require more processing time and memory
+
+- Audio quality depends on text extraction quality### Option 1: Using UV (Recommended)- Geração de audiolivros em alta qualidade (24kHz)### 🇪🇸 Spanish
+
+
+
+## 🔧 Main Dependencies
+
+
+
+- **kokoro-onnx**: AI voice synthesis1. **Clone the repository**- **3 voices**: Dora (Female) | Alex, Santa (Male)
+
+- **gradio**: Web interface
+
+- **PyPDF2**: PDF text extraction```bash
+
+- **ebooklib**: EPUB processing
 
 git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git## 📦 Instalação
 
+## 📄 License
+
 cd audiobook-converter
 
+MIT License
 ```### 🇫🇷 French
 
 
