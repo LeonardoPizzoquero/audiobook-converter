@@ -1,7 +1,8 @@
-gradio
+gradio==4.44.0
 soundfile
 numpy
 PyPDF2
 ebooklib
 beautifulsoup4
 tqdm
+huggingface-hub==0.25.0
