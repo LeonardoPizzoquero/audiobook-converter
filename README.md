@@ -2,7 +2,7 @@
 
 Convert your PDF and EPUB books into audiobooks with multilingual AI voices powered by Kokoro TTS!
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Gradio](https://img.shields.io/badge/UI-Gradio-orange.svg)](https://gradio.app/)
 
@@ -55,7 +55,7 @@ git clone https://github.com/LeonardoPizzoquero/audiobook-converter.git
 cd audiobook-converter
 
 # Create conda environment
-conda create -n audiobook python=3.9
+conda create -n audiobook python=3.11
 conda activate audiobook
 
 # Install dependencies
@@ -109,7 +109,7 @@ python app.py
 
 ## 📋 Requirements
 
-- **Python**: 3.8 or higher
+- **Python**: 3.11 or higher
 - **Memory**: At least 4GB RAM recommended
 - **Storage**: Additional space for output files
 - **Internet**: Required for initial model downloads
