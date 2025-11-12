@@ -12,12 +12,16 @@ cd audiobook-converter
 Copie estes arquivos do seu projeto local:
 
 ```bash
-# Arquivos principais
-cp /caminho/do/seu/projeto/app.py .
+# Aplicação principal (versão otimizada para HF)
+cp /caminho/do/seu/projeto/app_hf.py ./app.py
+
+# Módulos auxiliares
 cp /caminho/do/seu/projeto/voices.py .
 cp /caminho/do/seu/projeto/text_processor.py .
 cp /caminho/do/seu/projeto/audio_processor.py .
-cp /caminho/do/seu/projeto/requirements_spaces.txt ./requirements.txt
+
+# Dependências otimizadas para HF
+cp /caminho/do/seu/projeto/requirements_hf.txt ./requirements.txt
 
 # README para o Space
 cp /caminho/do/seu/projeto/README_HF.md ./README.md

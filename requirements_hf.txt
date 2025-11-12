@@ -1,0 +1,7 @@
+gradio
+soundfile
+numpy
+PyPDF2
+ebooklib
+beautifulsoup4
+tqdm
